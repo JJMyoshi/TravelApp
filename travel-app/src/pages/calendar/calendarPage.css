@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.real-calendar-wrapper{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.calendar-wrapper{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.calender-header{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.day-button,
+.list-button,
+.month-button{
+    width: calc(100% / 3);
+    background-color: white;
+    color: black;
+    border: 0;
+    transition-duration: 0.4s;
+    border-radius: 0%;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.day-button:hover,
+.list-button:hover,
+.month-button:hover{
+    background-color: gainsboro;
+    color: black;
+    border: 0;
+}
+
+.day-button-selected,
+.list-button-selected,
+.month-button-selected{
+    width: calc(100% / 3);
+    background-color: gray;
+    color: black;
+    border: 0;
+    border-radius: 0%;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.day-button-selected:hover,
+.list-button-selected:hover,
+.month-button-selected:hover{
+    background-color: gray;
+    color: black;
+    border: 0;
+    cursor: default;
+}
+
+.month-wrapper {
+    width: 90%;
+    margin-top: 15px;
+}
+
+.month-year-header{
+    width: 100%;
+    background-color: lightcoral;
+}
+
+.month-header {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+.month-days{
+    width: calc(100% / 7);
+    margin: 0;
+    background-color:lightcoral;
+}
+
+.month {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+.month-body {
+    width: 90%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+.day-grid{
+    width: calc(100% / 7);
+    padding-bottom: calc(100% / 6);
+    margin: 0;
+    background-color: white;
+}
+
+.day-grid-today{
+    width: calc(100% / 7);
+    padding-bottom: calc(100% / 6);
+    margin: 0;
+    font-weight: bolder;
+    background-color: white;
+}
+
+.day-grid-different-month{
+    width: calc(100% / 7);
+    padding-bottom:  calc(100% / 6);
+    margin: 0;
+    color: lightgray;
+    background-color: white;
+}
+
+.day-grid-different-month:hover,
+.day-grid-today:hover,
+.day-grid:hover {
+    background-color: gray;
+}
