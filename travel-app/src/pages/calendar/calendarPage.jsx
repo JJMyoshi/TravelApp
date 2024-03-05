@@ -6,10 +6,7 @@ import { faCaretLeft, faCaretRight} from "@fortawesome/free-solid-svg-icons";
 
 // Defining view modes
 const viewModes = {"Month": 0, "List": 1, "Day": 2};
-let viewMode = viewModes["Month"];
-function setMode(mode) {
-    viewMode = viewModes[mode];
-}
+let viewMode = viewModes["Day"];
 
 // Defining some example events
 let tickets = new Calendar.AllDayEvent("DON'T FORGET TO BUY TICKETS", "", "", "", "", new Date("2024-04-07"));
@@ -23,16 +20,21 @@ let events = {
 }
 
 let date = new Date();
+//date.setDate(32);
 let today = new Date();
+let selected = new Date();
+//selected.setDate(7);
+
 console.log(Calendar.monthDays(date));
+console.log(Calendar.weekDays(date));
 export default function CalendarPage() {
     if (viewMode === 0) {
         return (
             <div className="real-calendar-wrapper"> 
                 <div className="calendar-wrapper">
                     <div className="calendar-header">
-                        <button className="list-button" onClick = {setMode("List")}>LIST</button>
-                        <button className="day-button" onClick = {setMode("Day")}>DAY</button>
+                        <button className="list-button">LIST</button>
+                        <button className="day-button">DAY</button>
                         <button className="month-button-selected">MONTH</button>
                     </div>
                     <div className="month-wrapper">
@@ -57,8 +59,21 @@ export default function CalendarPage() {
                 <div className="calendar-wrapper">
                     <div className="calendar-header">
                         <button className="list-button-selected">LIST</button>
-                        <button className="day-button" onClick = {setMode("Day")}>DAY</button>
-                        <button className="month-button" onClick = {setMode("Month")}>MONTH</button>
+                        <button className="day-button">DAY</button>
+                        <button className="month-button">MONTH</button>
+                    </div>
+                    <div className="list-wrapper">
+                        <div className="month-year-header"> 
+                            <h2><FontAwesomeIcon icon={faCaretLeft}/> {Calendar.months[Calendar.weekDays(date)[0].getMonth()]} {Calendar.weekDays(date)[0].getDate()} {(Calendar.weekDays(date)[0].getFullYear() === Calendar.weekDays(date)[6].getFullYear()) ? "" : "," + Calendar.months[Calendar.weekDays(date)[0].getFullYear()]} - {(Calendar.weekDays(date)[0].getMonth() === Calendar.weekDays(date)[6].getMonth()) ? "" : Calendar.months[Calendar.weekDays(date)[6].getMonth()]} {Calendar.weekDays(date)[6].getDate()}, {Calendar.weekDays(date)[6].getFullYear()} <FontAwesomeIcon icon={faCaretRight}/></h2>    
+                        </div>
+                        <div className="week">
+                            <div className="week-header">
+                                {Calendar.days.map((days) => {return <div className="week-days"><p>{days[0]}</p></div>})}
+                            </div>
+                            <div className="week-body">
+                                {Calendar.weekDays(date).map((day) => {return <div className={"week-day-grid" + (((day.getFullYear() === today.getFullYear()) && (day.getMonth() === today.getMonth()) && (day.getDate() === today.getDate())) ? "-today" : "")}><p>{day.getDate()} <br/> {Calendar.eventOnDay(day, events) ? "\u2022" : "\u00A0"}</p></div>})}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,9 +83,22 @@ export default function CalendarPage() {
             <div className="real-calendar-wrapper"> 
                 <div className="calendar-wrapper">
                     <div className="calendar-header">
-                        <button className="list-button" onClick = {setMode("List")}>LIST</button>
+                        <button className="list-button">LIST</button>
                         <button className="day-button-selected">DAY</button>
-                        <button className="month-button" onClick = {setMode("Month")}>MONTH</button>
+                        <button className="month-button">MONTH</button>
+                    </div>
+                    <div className="day-wrapper">
+                        <div className="month-year-header"> 
+                            <h2><FontAwesomeIcon icon={faCaretLeft}/> {Calendar.months[selected.getMonth()]} {selected.getDate()}, {selected.getFullYear()} <FontAwesomeIcon icon={faCaretRight}/></h2>    
+                        </div>
+                        <div className="week">
+                            <div className="week-header">
+                                {Calendar.days.map((days) => {return <div className="week-days"><p>{days[0]}</p></div>})}
+                            </div>
+                            <div className="week-body">
+                            {Calendar.weekDays(date).map((day) => {return <div className={"week-day-grid" + (((day.getFullYear() === selected.getFullYear()) && (day.getMonth() === selected.getMonth()) && (day.getDate() === selected.getDate())) ? "-selected" : "")}><p>{day.getDate()} <br/> {Calendar.eventOnDay(day, events) ? "\u2022" : "\u00A0"}</p></div>})}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

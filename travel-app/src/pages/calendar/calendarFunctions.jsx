@@ -21,6 +21,17 @@ export function monthDays(date) {
     return rArr;
 }
 
+// Spits out an array of the days to be displayed for a given week
+export function weekDays(date) {
+    let d = firstOfWeek(date);
+    let rArr = [];
+    for(let i = 0; i < 7; i++) {
+        rArr.push(new Date(d.getFullYear(), d.getMonth(), d.getDate()));
+        d.setDate(d.getDate() + 1);
+    }
+    return rArr;
+}
+
 // Class for representing events
 export class Event {
     constructor(title, location, description, notes, tags, startTime, endTime) {
@@ -41,6 +52,7 @@ export function AllDayEvent(title, location, description, notes, tags, date) {
     return new Event(title, location, description, notes, tags, startTime, endTime);
 }
 
+// Checks if there is an event on a given day
 export function eventOnDay(date, events){
     for (let key in events) {
         if(key === (date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate())) {

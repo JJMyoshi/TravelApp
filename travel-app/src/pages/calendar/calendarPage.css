@@ -124,14 +124,14 @@
 
 .day-grid{
     width: calc(100% / 7);
-    padding-bottom: calc(100% / 6);
+    padding-bottom: calc(100% / 12);
     margin: 0;
     background-color: white;
 }
 
 .day-grid-today{
     width: calc(100% / 7);
-    padding-bottom: calc(100% / 6);
+    padding-bottom: calc(100% / 12);
     margin: 0;
     font-weight: bolder;
     background-color: white;
@@ -139,7 +139,7 @@
 
 .day-grid-different-month{
     width: calc(100% / 7);
-    padding-bottom:  calc(100% / 6);
+    padding-bottom:  calc(100% / 12);
     margin: 0;
     color: lightgray;
     background-color: white;
@@ -148,5 +148,76 @@
 .day-grid-different-month:hover,
 .day-grid-today:hover,
 .day-grid:hover {
+    background-color: gray;
+}
+
+.day-wrapper,
+.list-wrapper {
+    width: 90%;
+    margin-top: 15px;
+}
+
+.week-header {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+.week-days{
+    width: calc(100%/7);
+    margin: 0;
+    background-color:lightcoral;
+}
+
+.week {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+.week-body {
+    width: 90%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+.week-day-grid-different-month,
+.week-day-grid{
+    width: calc(100% / 7);
+    padding-bottom: calc(100% / 12);
+    margin: 0;
+    background-color: white;
+}
+
+.week-day-grid-today{
+    width: calc(100% / 7);
+    padding-bottom: calc(100% / 12);
+    margin: 0;
+    font-weight: bolder;
+    background-color: white;
+}
+
+.week-day-grid-selected{
+    width: calc(100% / 7);
+    padding-bottom: calc(100% / 12);
+    margin: 0;
+    font-weight: bolder;
+    background-color:crimson;
+    color: white;
+}
+
+.week-day-grid-different-month:hover,
+.week-day-grid-today:hover,
+.week-day-grid:hover {
     background-color: gray;
 }
