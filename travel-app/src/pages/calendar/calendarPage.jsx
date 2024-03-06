@@ -6,7 +6,7 @@ import { faCaretLeft, faCaretRight} from "@fortawesome/free-solid-svg-icons";
 
 // Defining view modes
 const viewModes = {"Month": 0, "List": 1, "Day": 2};
-let viewMode = viewModes["List"];
+let viewMode = viewModes["Day"];
 
 // Defining some example events
 let tickets = new Calendar.AllDayEvent("DON'T FORGET TO BUY TICKETS", "", "", "", "", new Date("2024-04-07"));
@@ -23,7 +23,7 @@ let date = new Date();
 date.setDate(7);
 let today = new Date();
 let selected = new Date();
-//selected.setDate(7);
+selected.setDate(7);
 
 console.log(Calendar.monthDays(date));
 console.log(Calendar.weekDays(date));
@@ -40,7 +40,7 @@ export default function CalendarPage() {
                         <button className="month-button-selected">MONTH</button>
                     </div>
                     <div className="month-wrapper">
-                        <div className="month-year-header"> 
+                        <div className="month-year-header-lol"> 
                             <h2><FontAwesomeIcon icon={faCaretLeft}/> {Calendar.months[date.getMonth()]} {date.getFullYear()} <FontAwesomeIcon icon={faCaretRight}/></h2>    
                         </div>
                         <div className="month">
@@ -77,7 +77,7 @@ export default function CalendarPage() {
                             </div>
                         </div>
                         <div className="list">
-                            {Calendar.weekDays(date).map((day) => {return <div classnme="list-day"><h2 className="list-date-label">{Calendar.days[day.getDay()]}, {Calendar.months[day.getMonth()]} {day.getDate()}, {day.getFullYear()}</h2><h3 className='event-listings'>{Calendar.eventOnDay(day, events) ? (Calendar.eventsOnDay(day, events).map((ev) => {return <div className='listed-event'><p className='event-time'>{((ev.startTime.getHours() === 0) && (ev.endTime.getHours() === 23)) ? "All day\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0" : (Calendar.dateTime(ev.startTime) + "-" + Calendar.dateTime(ev.endTime))}</p><h3 className="event-title">{ev.title}</h3></div>})) : <h4 className='no-events'>No events</h4>}</h3></div>})}
+                            {Calendar.weekDays(date).map((day) => {return <div classnme="list-day"><h2 className="list-date-label">{Calendar.days[day.getDay()]}, {Calendar.months[day.getMonth()]} {day.getDate()}, {day.getFullYear()}</h2><h3 className='event-listings'>{Calendar.eventOnDay(day, events) ? (Calendar.eventsOnDay(day, events).map((ev) => {return <div className='listed-event'><p className='event-time'>{Calendar.isAllDay(ev) ? "All day\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0" : (Calendar.dateTime(ev.startTime) + "-" + Calendar.dateTime(ev.endTime))}</p><h3 className="event-title">{ev.title}</h3></div>})) : <h4 className='no-events'>No events</h4>}</h3></div>})}
                         </div>
                     </div>
                 </div>
@@ -102,6 +102,14 @@ export default function CalendarPage() {
                             </div>
                             <div className="week-body">
                             {Calendar.weekDays(date).map((day) => {return <div className={"week-day-grid" + (((day.getFullYear() === selected.getFullYear()) && (day.getMonth() === selected.getMonth()) && (day.getDate() === selected.getDate())) ? "-selected" : "")}><p>{day.getDate()} <br/> {Calendar.eventOnDay(day, events) ? "\u2022" : "\u00A0"}</p></div>})}
+                            </div>
+                        </div>
+                        <div className="day-list-wrapper">
+                            <div className="all-day-list">
+                                {Calendar.eventsOnDay(selected, events).map((ev) => {return <div className="all-day-event"><h4 className="all-day-label">{Calendar.isAllDay(ev) ? ("All day:\u00A0\u00A0\u00A0\u00A0\u00A0" + ev.title) : ""}</h4></div>})}
+                            </div>
+                            <div className="hour-list">
+                                {Calendar.getDayHours(0, 19).map((hour) => {return <div className={"hour-row" + (hour % 2 ? "" : "-odd")}><p className="hour-label">{Calendar.formatTime(hour, 0)}</p></div>})}
                             </div>
                         </div>
                     </div>

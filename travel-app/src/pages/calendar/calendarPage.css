@@ -20,6 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    align-content: center;
     justify-content: center;
     box-sizing: border-box;
 }
@@ -84,6 +85,12 @@
 }
 
 .month-year-header{
+    width: 90%;
+    margin-left: 5%;
+    background-color: lightcoral;
+}
+
+.month-year-header-lol{
     width: 100%;
     background-color: lightcoral;
 }
@@ -153,7 +160,9 @@
 
 .day-wrapper,
 .list-wrapper {
-    width: 90%;
+    width: 95%;
+    align-content: center;
+    align-items: center;
     margin-top: 15px;
 }
 
@@ -161,6 +170,7 @@
     width: 100%;
     flex-grow: 1;
     display: flex;
+    align-self: center;
     flex-wrap: wrap;
     justify-content: center;
     box-sizing: border-box;
@@ -173,12 +183,14 @@
 }
 
 .week {
-    width: 100%;
+    width: 90%;
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    align-self: center;
     justify-content: center;
+    margin-left: 5%;
     box-sizing: border-box;
   }
 
@@ -212,7 +224,7 @@
     padding-bottom: calc(100% / 12);
     margin: 0;
     font-weight: bolder;
-    background-color:crimson;
+    background-color:maroon;
     color: white;
 }
 
@@ -264,4 +276,38 @@
 .event-title {
     display: inline-block;
     margin-left: 15px;
+}
+
+.hour-list {
+    text-align: left;
+}
+
+.hour-row-odd,
+.hour-row {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: white;
+}
+
+.hour-row-odd {
+    background-color: lightgray;
+}
+
+.hour-label {
+    margin-left: 10px;
+}
+
+.all-day-label {
+    margin-left: 10px;
+}
+
+.all-day-list{
+    margin-top: 15px;
+    width: 100%;
+    text-align: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 2px solid rgb(78, 0, 0);
+    background-color: maroon;
+    color: white;
 }

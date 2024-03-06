@@ -79,13 +79,42 @@ export function eventsOnDay(date, events){
 // Converts date time into a string
 export function dateTime(date) {
     let rStr = "";
+    if (date.getHours() < 10) {
+        rStr = "0";
+    }
     rStr = rStr + date.getHours() + ":";
-    console.log(rStr);
     if (date.getMinutes() < 10) {
         rStr = rStr + "0";
-        console.log(rStr);
     }
     rStr = rStr + date.getMinutes().toString();
-    console.log(rStr);
     return rStr;
+}
+
+export function getDayHours(start, end) {
+    let rArr = []; 
+    for (let i = start; i < end; i++) {
+        rArr.push(i);
+    }
+    return rArr;
+}
+
+export function formatTime(hour, minute) {
+    let rStr = "";
+    if (hour < 10) {
+        rStr = "0";
+    }
+    rStr = rStr + hour + ":";
+    if (minute < 10) {
+        rStr = rStr + "0";
+    }
+    rStr = rStr + minute.toString();
+    return rStr;
+}
+
+export function isAllDay(event) {
+    if ((event.startTime.getHours() === 0) && (event.startTime.getMinutes() === 0) && (event.startTime.getSeconds() === 0) && (event.startTime.getMilliseconds() === 0) && (event.endTime.getHours() === 23) && (event.endTime.getMinutes() === 59) && (event.endTime.getSeconds() === 59) && (event.endTime.getMilliseconds() === 999)) {
+        return true;
+    } else {
+        return false;
+    }
 }
