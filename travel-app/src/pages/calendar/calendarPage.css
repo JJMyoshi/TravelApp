@@ -221,3 +221,47 @@
 .week-day-grid:hover {
     background-color: gray;
 }
+
+.list {
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+    background-color:lightcoral;
+}
+
+.list-date-label{
+    padding-left: 10px;
+}
+
+.event-listings {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.listed-event{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.listed-event:hover {
+    background-color: gray;
+}
+
+.no-events:hover,
+.no-events {
+    background-color: lightgray;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.event-time{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.event-title {
+    display: inline-block;
+    margin-left: 15px;
+}

@@ -48,7 +48,7 @@ export class Event {
 // Constructor for all day event
 export function AllDayEvent(title, location, description, notes, tags, date) {
     let startTime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0, 0);
-    let endTime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 11, 59, 59, 999);
+    let endTime = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59, 999);
     return new Event(title, location, description, notes, tags, startTime, endTime);
 }
 
@@ -60,4 +60,32 @@ export function eventOnDay(date, events){
         }
     }
     return false;
+}
+
+export function eventsOnDay(date, events){
+    let rArr = [];
+    for (let key in events) {
+        if(key === (date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate())) {
+            let i = 0;
+            while (i < events[key].length) {
+                rArr.push(events[key][i]);
+                i++;
+            }
+        }
+    }
+    return rArr;
+}
+
+// Converts date time into a string
+export function dateTime(date) {
+    let rStr = "";
+    rStr = rStr + date.getHours() + ":";
+    console.log(rStr);
+    if (date.getMinutes() < 10) {
+        rStr = rStr + "0";
+        console.log(rStr);
+    }
+    rStr = rStr + date.getMinutes().toString();
+    console.log(rStr);
+    return rStr;
 }
