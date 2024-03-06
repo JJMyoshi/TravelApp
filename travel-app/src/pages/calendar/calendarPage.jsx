@@ -2,16 +2,16 @@ import React from 'react';
 import * as Calendar from "./calendarFunctions";
 import "./calendarPage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft, faCaretRight} from "@fortawesome/free-solid-svg-icons";
+import { faCaretLeft, faCaretRight, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 // Defining view modes
 const viewModes = {"Month": 0, "List": 1, "Day": 2};
 let viewMode = viewModes["Day"];
 
 // Defining some example events
-let tickets = new Calendar.AllDayEvent("DON'T FORGET TO BUY TICKETS", "", "", "", "", new Date("2024-04-07"));
-let tour = new Calendar.Event("Calgary Tower Tour", "", "", "", "", new Date("April 7, 2024 13:00:00"), new Date("April 7, 2024 15:30:00"));
-let tattooCon = new Calendar.AllDayEvent("Tattoo Convention", "", "", "", "", new Date("2024-04-09"));
+let tickets = new Calendar.AllDayEvent("DON'T FORGET TO BUY TICKETS", "", "", "", "", new Date("2024-03-07"));
+let tour = new Calendar.Event("Calgary Tower Tour", "", "", "", "", new Date("March 7, 2024 13:00:00"), new Date("March 7, 2024 15:30:00"));
+let tattooCon = new Calendar.AllDayEvent("Tattoo Convention", "", "", "", "", new Date("2024-03-09"));
 
 // Filling a map of events with example events
 let events = {
@@ -23,7 +23,7 @@ let date = new Date();
 date.setDate(7);
 let today = new Date();
 let selected = new Date();
-selected.setDate(7);
+selected.setDate(9);
 
 console.log(Calendar.monthDays(date));
 console.log(Calendar.weekDays(date));
@@ -108,9 +108,17 @@ export default function CalendarPage() {
                             <div className="all-day-list">
                                 {Calendar.eventsOnDay(selected, events).map((ev) => {return <div className="all-day-event"><h4 className="all-day-label">{Calendar.isAllDay(ev) ? ("All day:\u00A0\u00A0\u00A0\u00A0\u00A0" + ev.title) : ""}</h4></div>})}
                             </div>
+                            
                             <div className="hour-list">
                                 {Calendar.getDayHours(0, 24).map((hour) => {return <div className={"hour-row" + (hour % 2 ? "" : "-odd")}><p className="hour-label">{Calendar.formatTime(hour, 0)}</p></div>})}
                             </div>
+                            
+                            {/*
+                            <div className="lol-box">
+                                <h3 className="lol-title">Calgary Tower Tour</h3>
+                                <h4 className="lol-location"><FontAwesomeIcon icon={faLocationDot}/> 101 9 Ave SW, Calgary, AB T2P 1J9</h4>
+                            </div>
+                            */}
                         </div>
                     </div>
                 </div>
