@@ -109,7 +109,7 @@ export default function CalendarPage() {
                                 {Calendar.eventsOnDay(selected, events).map((ev) => {return <div className="all-day-event"><h4 className="all-day-label">{Calendar.isAllDay(ev) ? ("All day:\u00A0\u00A0\u00A0\u00A0\u00A0" + ev.title) : ""}</h4></div>})}
                             </div>
                             <div className="hour-list">
-                                {Calendar.getDayHours(0, 19).map((hour) => {return <div className={"hour-row" + (hour % 2 ? "" : "-odd")}><p className="hour-label">{Calendar.formatTime(hour, 0)}</p></div>})}
+                                {Calendar.getDayHours(0, 24).map((hour) => {return <div className={"hour-row" + (hour % 2 ? "" : "-odd")}><p className="hour-label">{Calendar.formatTime(hour, 0)}</p></div>})}
                             </div>
                         </div>
                     </div>
