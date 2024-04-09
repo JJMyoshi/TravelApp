@@ -77,7 +77,7 @@
 
 .footer-button button {
   width: calc(384px/4); /* Adjust width as needed */
-  height: 50px;
+  height: 60px;
   background-color: lightslategray;
   border: 1px solid black; /* White border */
   color: black;
