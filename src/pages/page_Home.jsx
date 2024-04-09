@@ -20,9 +20,11 @@ export default function page_Home() {
                 <img src={weatherImage} alt="weatherImage" className="weatherImage" />
             </div>
             <div className="weather-button-field">
-                <button>
-                    Go to WeatherNetwork.ca
-                </button>
+                <a href="https://www.theweathernetwork.com/ca/weather/alberta/calgary" target="_blank">
+                    <button>
+                        Go to WeatherNetwork.ca
+                    </button>
+                </a>
             </div>
         </div>
     );
