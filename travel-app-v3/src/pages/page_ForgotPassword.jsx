@@ -19,6 +19,7 @@ const ForgotPassword = ({ onCancel, onResetPassword }) => {
     // For simplicity, let's assume the reset password succeeds if email is provided
     onResetPassword(email); // Call the onResetPassword function passed as a prop
   };
+  
 
   return (
     <div className="forgot-password-container">
