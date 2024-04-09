@@ -1,0 +1,175 @@
+/* CONTAINER RELATED CSS */
+
+.outer-container {
+  background-color: black; /* Black background outside the box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mobile-container {
+  width: 384px;
+  height: 700px;
+  max-height: 700px;
+  padding: 0; /* Remove padding */
+  background-color: #eeeee4; /* White background inside the box */
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.header-container,
+.body-container,
+.footer-container {
+  width: 384px; 
+  padding: 0; 
+  margin: 0; /* Remove margin */
+}
+
+.header-container {
+  background-color: #154c79;
+  height: 50px;
+  font-family: "DM-Sans", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+}
+
+.whereLogo{
+  margin-left: 60px;
+}
+
+.mini-weather-logo{
+  margin-left: -14px;
+}
+
+.body-container {
+  background-color:#eeeee4;
+  height: 600px;
+
+}
+
+.footer-container {
+  background-color: #abdbe3;
+  height: 50px;
+  font-size: 13px;
+}
+
+
+/* ALL BUTTONS  */
+/* Style for button hover */
+/* .footer-button button:hover {
+  background-color: white;
+  color: black;
+} */
+
+/* FOOTER RELATED  */
+/* Style for the buttons */
+.footer-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f0f0; /* Set background color for the footer */
+}
+
+.footer-button button {
+  width: calc(384px/4); /* Adjust width as needed */
+  height: 50px;
+  background-color: lightslategray;
+  border: 1px solid black; /* White border */
+  color: black;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-button button.active {
+  color: white; /* Set text color for active button */
+  background-color: #501B1D; /* Set text color for active button */
+}
+
+.footer-button button img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 5px; /* Add margin below the image */
+}
+
+
+
+/* HEADER RELATED */
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+
+/* POP OUT  */
+
+.popup-large-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent grey background */
+  padding: 20px;
+  color: white;
+  z-index: 1000; /* Ensure the panel is on top of other content */
+}
+
+.logout-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25); /* Transparent grey background */
+}
+
+.panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  background-color: red;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.panel h2 {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #ccc; /* Light grey background on hover */
+}
