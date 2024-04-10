@@ -79,7 +79,49 @@ CTRL-C to stop
 
 > npm run dev
 
+## Using the Application
 
+#### To sign up for an account:
+
+Use the following information to fill out the corresponding fields:
+
+- First name: John
+- Last name: Smith
+- Email: john.smith123@gmail.com
+- Password: $Password123
+
+#### To login:
+
+Use the following information to fill out the corresponding fields:
+
+- Email: john.smith123@gmail.com
+- Password: $Password123
+
+And click the 'Login' button to proceed.
+
+#### Forgot password:
+
+If the user forgot their password, they can click on the 'Forgot Password?' hyperlink that will take them to a new page.
+
+Enter the user's email (john.smith123@gmail.com) and after clicking the 'Reset Password' button, it will direct you back to the login page (in theory, the user would receive an email where they can reset their password).
+
+#### Change password:
+
+As an example of changing a password, you can enter the following information to successfully change the password:
+
+- Current Password: $Password123
+- New Password: 12345678
+- Confirm Password: 12345678
+
+When you logout and log back in with this new password, it will take you to the home page.
+
+#### Deleting an account:
+
+Deleting your account will take you back to the login page.
+
+#### Logout:
+
+Logging out of your account will also take you back to the login page.
 
 ## How to set up own screens
 

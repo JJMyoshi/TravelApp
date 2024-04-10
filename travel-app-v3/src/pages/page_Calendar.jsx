@@ -175,20 +175,7 @@ const Page_Calendar = () => {
           <button onClick={() => handleLocationButtonClick('Downtown')}>Downtown</button>
           <button onClick={() => handleLocationButtonClick('All')}>All</button>
         </div>
-        
-        {/* Checkbox for filtering */}
-        <div className="checkbox-container">
-          <div className="checkbox-item">
-          <input
-        type="checkbox"
-        id="check1"
-        checked={isItem1Checked}
-        onChange={handleCheckboxChange}
-      />
-      <label htmlFor="check1">Filter</label>
-          </div>
-          
-          {/* Other checkboxes and their associated logic */}
+
         </div>
       </div>
     </div>
