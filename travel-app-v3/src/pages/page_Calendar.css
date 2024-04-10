@@ -22,46 +22,50 @@
     overflow: hidden; /* Hide overflow content beyond the container */
   }
 
-  .filters-container {
-    height: 100px;
-  }
-
   .resetButton {
     position: absolute;
-    width: 30px; 
-    height: 30px; 
-    top: 10px; 
-    left: 10px; 
+    width: 30px;
+    height:30px;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
   }
 
-  
-  .location-buttons {
-    position: flex;
-    margin-left: 0px;
     
-  }
- 
-  .location-buttons button {
-    margin-left: 15px;
-    margin-right: 10px;
-     margin-top: 5px;
-     width: 100px; 
-     height: 40px; 
-     border: 0.5px solid #000;
-  }
+ /* Adjust the size of the reset button */
+ .resetButton {
+   position: absolute;
+   width: 30px; /* Adjust width as needed */
+   height: 30px; /* Adjust height as needed */
+   top: 10px; /* Adjust top position as needed */
+   left: 10px; /* Adjust left position as needed */
+ }
 
-  .map-button {
-    position: absolute;
-    /* Adjust the button styles as needed */
-  }
+ /* Adjust the size of the location buttons */
+ .location-buttons {
+   position: flex;
+   margin-left: 0px;
+ }
 
+ .location-buttons button {
+ margin-left: 15px;
+  margin-right: 10px;
+   margin-top: 5px;
+   width: 100px; /* Adjust width as needed */
+   height: 40px; /* Adjust height as needed */
+   border: 0.5px solid #000;
+ }
+
+ /* Adjust the size of the map button */
+ .map-button {
+   position: absolute;
+   /* Adjust the button styles as needed */
+ }
 
   .checkbox-container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     font-size: 11px;
-    border: 2px solid #000;
     margin: 10px;
   }
   .checkbox-item {
