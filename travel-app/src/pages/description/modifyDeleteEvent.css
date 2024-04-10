@@ -1,0 +1,155 @@
+/* ModifyDeleteEvent.css - Ensure this matches the name of your CSS file exactly */
+.event-detail-form {
+  background-color: #501B1D; /* Dark background color */
+  color: white; /* White text color */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0; /* Remove margin to fit within the viewport */
+  overflow: auto; /* Add scrolling for small devices */
+  height: auto; /* Allows the form to grow as needed, up to the height of the viewport */
+  max-height: calc(100vh - 20px); /* Adjust for padding */
+}
+
+.event-detail-form h1 {
+  color: #FFD700; /* Gold color for the heading */
+  text-align: left; /* Center the heading */
+  margin-bottom: 34px; /* Add some bottom margin */
+  font-size: 28px;
+}
+
+/* Adjust the size of the inputs and text areas to fit the device width */
+.event-input,
+.event-textarea,
+.container input[type="text"],
+.container textarea {
+    width: 100%; /* Set width to fill the container */
+    padding: 10px; /* Set padding */
+    margin-bottom: 16px; /* Set bottom margin */
+    border: 2px solid white; /* Set border */
+    background: white; /* Set transparent background */
+    color: #501B1D; /* Set text color */
+    font-size: 16px; /* Set font size */
+    text-align: left; /* Align text to the left */
+    border-radius: 4px; /* Set border radius */
+}
+
+.event-textarea {
+  height: 70px; /* Adjust the height of textareas */
+  width: 1000px;
+  resize: none; /* Disable resizing if not needed */
+
+}
+
+/* Align labels and titles within the flex container */
+.event-detail-timing {
+    display: flex;
+    flex-direction: column; /* Allows elements to wrap onto the next line */
+    justify-content: space-between; /* Spaces out the children */
+    gap: 10px; /* Adds a gap between the children */
+    width: 100%;
+  }
+  
+.event-timing-row {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+  /* Style for each timing label-input pair */
+  .event-timing-group {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+    width: calc(50% - 50px); /* Subtract the gap from the 50% width */
+    margin-bottom: 15px;
+    
+  }
+  
+  /* Modify the label style for alignment */
+  .event-label-starts,
+  .event-label-ends {
+    display: inline-block;
+    text-align: right; /* Align text to the right */
+    margin-right: 10px;
+    width: auto;
+    
+  }
+.event-title {
+  font-size: 18px; /* Adjust font size for mobile */
+  color: white;
+  margin-bottom: 10x;
+  margin-right: 70px;
+}
+
+
+
+.event-detail-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+  
+.event-actions-row {
+    display: flex;
+    justify-content: space-between; /* This will space the buttons evenly */
+    width: 100%;
+    margin-bottom: 10px; /* Space between this row and the delete button */
+}
+  
+.event-detail-actions button {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px; /* Space around buttons */
+    flex-grow: 1; /* Buttons will grow to occupy the space equally */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+  
+.event-input {
+  width: 100%;
+  }
+  
+  /* Specific button styles */
+.event-detail-actions .save {
+    background-color: #007bff; /* Blue */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+  
+.event-detail-actions .cancel {
+    background-color: #6c757d; /* Gray */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+.event-detail-actions .delete {
+    background-color: #dc3545; /* Red */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    width: 70%; /* Adjust width as needed, or make it the same as the buttons above */
+   
+}
+  
+.event-detail-actions button:hover {
+    opacity: 0.9; /* Hover effect */
+}
+  
+.event-detail-toggle {
+  display: flex;
+  justify-content: space-between; /* Align items evenly */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 15px;
+}
+
+.event-label {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.event-checkbox {
+  margin-left: 190px; /* Adjust margin to create space between label and checkbox */
+  width: 24px; /* Set width */
+  height: 34px; /* Set height */
+}

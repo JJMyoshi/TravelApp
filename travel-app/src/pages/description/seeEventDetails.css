@@ -1,0 +1,73 @@
+/* seeEventDetails.css */
+
+.event-card {
+    background-color: #501B1D; /* Dark background color */
+    color: white; /* White text color */
+    margin: 0px;
+    padding: 16px;
+    border-radius: 8px;
+    overflow: auto; /* Add scrolling for small devices */
+    max-height: calc(100vh - 20px); /* Adjust for padding */
+    font-size: larger;
+}
+
+.event-card h2,
+.event-card p {
+    margin-bottom: 16px;
+}
+
+.event-info,
+.event-description,
+.event-notes {
+    margin-bottom: 16px;
+}
+
+.event-add-calendar {
+    padding: 8px 16px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.event-add-calendar:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+  
+.event-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .event-label {
+    font-weight: bold;
+    margin-right: 8px; /* Space between label and input */
+  }
+  
+  .event-input,
+  .event-textarea {
+
+    flex-grow: 1;
+    margin-left: 8px; /* Space between label and input */
+    /* ... existing input and textarea styles ... */
+  }
+  .event-input::placeholder {
+    color: #501B1D; /* Placeholder color for title and location textboxes */
+}
+  
+  .event-input-small {
+    background-color: white;
+    color: #501B1D;
+    flex-basis: calc(50% - 10px); /* Half the parent width minus the gap */
+    margin-left: 8px; /* Space between label and input */
+  }
+  
+  .event-actions {
+    display: flex;
+    justify-content: space-around; /* Adjust this as needed for your buttons */
+    margin-top: 20px; /* Space above the buttons */
+  }
+  
+  

@@ -1,0 +1,291 @@
+/* accountOption */
+.accountOptions-container {
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details-container {
+    background-color: grey; /* Change color as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: add border-radius for rounded corners */
+    font-size: 23px;
+}
+
+.accountOptions-field-details {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.accountOptions-field-changePassword,
+.accountOptions-field-deleteAccount,
+.accountOptions-field-logOut {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Updated styles for the "Change Password" button */
+.accountOptions-field-changePassword button,
+.accountOptions-field-deleteAccount button {
+    width: 300px;
+    font-size: 20px;
+    align-self: center;
+}
+
+.accountOptions-field-logOut button {
+    width: 300px;
+    font-size: 20px;
+    align-self: center;
+    background-color: darkred; /* Change color as needed */
+}
+
+.accountOptions-field-changePassword button:hover,
+.accountOptions-field-deleteAccount button:hover,
+.accountOptions-field-logOut button:hover {
+    background-color: white; /* Change color on hover, adjust as needed */
+    color: black;
+  }
+
+
+/* changePASSWORD */
+
+.changePassword-container{
+    color: #501B1D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.change-password-header {
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.change-password-instructions {
+    color: white;
+    font-size: 14px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+}
+
+.changePassword-field-description{
+    color: white;
+    text-emphasis-color: white;
+
+}
+
+.current-password-box-password1,
+.changePassword-box-password1 {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 80px 10px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.changePassword-field-sendLink{
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+
+/* CREATE ACCOUNT */
+
+
+.createAccount-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-header {
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.detail-headers {
+    color: white;
+    font-size: 14px;
+    margin-right: 0; /* Remove or set to 0 if you want left alignment */
+    margin-bottom: 2.5px;
+    text-align: left;
+}
+
+.first-name-textfield,
+.last-name-textfield,
+.newAccountEmailField,
+.newAccountPassword1,
+.newAccountPassword2 {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 80px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Dark grey color */
+    padding: 6px; /* Adjust padding as needed */
+    border-radius: 0px; /* Optional: add border-radius for rounded corners */
+    font-size: 12px;
+  }
+
+  .captcha-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+/* Optional: add margin between the fields */
+  }
+  
+  .captcha-field label {
+    color: white; /* Set text color for the label */
+  }
+  
+  .captcha-field input {
+    margin-right: 5px; /* Optional: add space between checkbox and label */
+  }
+  
+  .create-account-field button {
+    background-color: #2e1114; /* Dark red color, adjust as needed */
+    color: white; /* Set text color for the button */
+    padding: 15px 30px; /* Adjust padding as needed */
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 3px; /* Optional: add border-radius for rounded corners */
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  .create-account-field button:hover {
+    background-color: red; /* Change color on hover, adjust as needed */
+  }
+
+
+/* FORGOT PASSWORD PAGE  */
+
+.forgotPassword-container{
+    color: #501B1D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forgotPassword-field-text{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.enterEmail-text {
+    color: white;
+    font-size: 19.5px;
+    margin-top: 100px;
+
+}
+
+.emailLink-text {
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.forgotPassword-box-email{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 80px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.forgotPassword-field-button{
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 105px 10px 105px;
+    margin-top: 25px;
+}
+
+
+
+/* LOGIN PAGE  */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whereLogo {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.emailField,
+.passwordField {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 80px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.forgot-password-link {
+    font-size: 14px;
+    color: white;
+    margin-left: 130px;
+}
+
+.login-button {
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 105px 10px 105px;
+    margin-top: 25px;
+}
+
+.sign-up-link,
+.sign-up-text {
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure the overlay is on top of other elements */
+}
